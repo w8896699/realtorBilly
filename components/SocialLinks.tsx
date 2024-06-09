@@ -19,34 +19,36 @@ const SocialLinks = () => {
           </span>
         </Button>
       )}
-      {socialLinks.linkedin && (
+{socialLinks.xiaohongshu && (
+  <Button
+    className="btn-icon-only rounded-circle ml-1"
+    // color="instagram"
+    rel="noopener"
+    aria-label="Xiaohongshu"
+    href={socialLinks.xiaohongshu}
+    target="_blank"
+  >
+    {/* <span className="btn-inner--icon"> */}
+      <img className="icon-style btn-icon-only rounded-circle position-relative"  src="/img/icons/SimpleIconsXiaohongshu.png" alt="Xiaohongshu" />
+    {/* </span> */}
+  </Button>
+)}
+
+      {socialLinks.wechat && (
         <Button
           className="btn-icon-only rounded-circle ml-1"
-          color="twitter"
+          color="success"
           rel="noopener"
-          aria-label="Linkedin"
+          aria-label="Wechat"
           href={socialLinks.linkedin}
           target="_blank"
         >
           <span className="btn-inner--icon">
-            <i className="fa fa-linkedin" />
+            <i className="fa fa-weixin" />
           </span>
         </Button>
       )}
-      {socialLinks.github && (
-        <Button
-          className="btn-icon-only rounded-circle ml-1"
-          color="github"
-          href={socialLinks.github}
-          rel="noopener"
-          aria-label="Github"
-          target="_blank"
-        >
-          <span className="btn-inner--icon">
-            <i className="fa fa-github" />
-          </span>
-        </Button>
-      )}
+
       {socialLinks.instagram && (
         <Button
           className="btn-icon-only rounded-circle ml-1"
@@ -61,34 +63,21 @@ const SocialLinks = () => {
           </span>
         </Button>
       )}
-      {socialLinks.facebook && (
+      {socialLinks.phone && (
         <Button
           className="btn-icon-only rounded-circle ml-1"
-          color="facebook"
-          href={socialLinks.facebook}
+          color="white"
+          href={socialLinks.phone}
           target="_blank"
           rel="noopener"
-          aria-label="Facebook"
+          aria-label="phone"
         >
           <span className="btn-inner--icon">
-            <i className="fa fa-facebook-square" />
+            <i className="fa fa-phone" />
           </span>
         </Button>
       )}
-      {socialLinks.twitter && (
-        <Button
-          className="btn-icon-only rounded-circle"
-          color="twitter"
-          href={socialLinks.twitter}
-          target="_blank"
-          rel="noopener"
-          aria-label="Twitter"
-        >
-          <span className="btn-inner--icon">
-            <i className="fa fa-twitter" />
-          </span>
-        </Button>
-      )}
+
     </div>
   );
 };

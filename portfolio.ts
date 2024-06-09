@@ -26,10 +26,13 @@ export const openSource = {
 export const contact = {};
 
 export const socialLinks: SocialLinksType = {
-  email: "mailto:hanzla.tauqeer123@gmail.com",
-  linkedin: "https://www.linkedin.com/in/1hanzla100/",
-  github: "https://github.com/1hanzla100",
+  email: "mailto:better.call@realtorbilly.ca",
+  // linkedin: "https://www.linkedin.com/in/1hanzla100/",
+  // github: "https://github.com/1hanzla100",
   instagram: "https://www.instagram.com/__hanzla100",
+  wechat:"https://www.xiaohongshu.com/user/profile/653f202600000000300310d6",
+  xiaohongshu:"https://www.xiaohongshu.com/user/profile/653f202600000000300310d6",
+  phone:"https://www.xiaohongshu.com/user/profile/653f202600000000300310d6"
   // facebook: 'https://www.facebook.com/1hanzla100',
   // twitter: 'https://twitter.com/1hanzla100',
 };

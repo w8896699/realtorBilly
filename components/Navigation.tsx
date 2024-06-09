@@ -54,7 +54,7 @@ const Navigation = () => {
                 </Row>
               </div>
               <Nav className="align-items-lg-center ml-lg-auto" navbar>
-                {socialLinks.facebook && (
+                {socialLinks.email && (
                   <NavItem>
                     <NavLink
                       rel="noopener"
@@ -63,8 +63,8 @@ const Navigation = () => {
                       href={socialLinks.facebook}
                       target="_blank"
                     >
-                      <i className="fa fa-facebook-square" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">Facebook</span>
+                      <i className="fa fa-envelope" />
+                      <span className="nav-link-inner--text d-lg-none ml-2">E-mail</span>
                     </NavLink>
                   </NavItem>
                 )}
@@ -82,35 +82,21 @@ const Navigation = () => {
                     </NavLink>
                   </NavItem>
                 )}
-                {socialLinks.github && (
+                {socialLinks.wechat && (
                   <NavItem>
                     <NavLink
                       rel="noopener"
                       aria-label="Github"
                       className="nav-link-icon"
-                      href={socialLinks.github}
+                      href={socialLinks.wechat}
                       target="_blank"
                     >
-                      <i className="fa fa-github" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">Github</span>
+                      <i className="fa fa-weixin" />
+                      <span className="nav-link-inner--text d-lg-none ml-2">weixin</span>
                     </NavLink>
                   </NavItem>
                 )}
-                {socialLinks.linkedin && (
-                  <NavItem>
-                    <NavLink
-                      rel="noopener"
-                      aria-label="Linkedin"
-                      className="nav-link-icon"
-                      href={socialLinks.linkedin}
-                      target="_blank"
-                    >
-                      <i className="fa fa-linkedin" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">Linkedin</span>
-                    </NavLink>
-                  </NavItem>
-                )}
-                {socialLinks.twitter && (
+                {socialLinks.phone && (
                   <NavItem>
                     <NavLink
                       rel="noopener"
@@ -119,11 +105,26 @@ const Navigation = () => {
                       href={socialLinks.twitter}
                       target="_blank"
                     >
-                      <i className="fa fa-twitter-square" />
+                      <i className="fa fa-phone-square" />
                       <span className="nav-link-inner--text d-lg-none ml-2">Twitter</span>
                     </NavLink>
                   </NavItem>
                 )}
+                {socialLinks.xiaohongshu && (
+                  <NavItem>
+                    <NavLink
+                      rel="noopener"
+                      aria-label="Linkedin"
+                      className="nav-link-icon"
+                      href={socialLinks.linkedin}
+                      target="_blank"
+                    >
+                      <img className="btn-icon-only rounded-circle" src="/img/icons/SimpleIconsXiaohongshu.png" alt="Xiaohongshu" />
+                      <span className="nav-link-inner--text d-lg-none ml-2">xiaohongshu</span>
+                    </NavLink>
+                  </NavItem>
+                )}
+  
               </Nav>
             </UncontrolledCollapse>
           </Container>
