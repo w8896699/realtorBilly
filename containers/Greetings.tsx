@@ -14,11 +14,11 @@ const Greetings = () => {
 
     return () => clearInterval(intervalId); // Clean up the interval on component unmount
   }, []);
-
-  useEffect(() =>{
+  
+  useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement!.scrollTop = 0;
-  })
+  }, []);
 
   const [backgroundImage, setBackgroundImage] = useState('/img/homepage1.png'); // default background
   const images = ['/img/homepage2.png', '/img/homepage3.png', '/img/homepage5.png','/img/homepage6.png','/img/homepage7.png','/img/homepage8.png', '/img/homepage9.png']; // Array of images
@@ -36,7 +36,7 @@ const Greetings = () => {
                   <h1 className="display-3 text-white">{greetings.title + " "}</h1>
                   <p className="lead text-white">{greetings.description}</p>
                   <SocialLinks />
-                  {greetings.resumeLink && (
+                  {/* {greetings.resumeLink && (
                     <div className="btn-wrapper my-4">
                       <Button
                         className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
@@ -49,7 +49,7 @@ const Greetings = () => {
                         <span className="btn-inner--text">Learn More</span>
                       </Button>
                     </div>
-                  )}
+                  )} */}
                 </Col>
                 <Col lg="6" className="p-5">
                    <img src="/img/realtorBilly.jpeg" alt="Descriptive Alt Text" className="vh-45" />

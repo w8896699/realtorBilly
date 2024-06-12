@@ -19,20 +19,19 @@ export const greetings: GreetingsType = {
   resumeLink: "#",
 };
 
-export const openSource = {
-  githubUserName: "1hanzla100",
-};
+// export const openSource = {
+//   githubUserName: "1hanzla100",
+// };
 
 export const contact = {};
 
 export const socialLinks: SocialLinksType = {
-  email: "mailto:better.call@realtorbilly.ca",
-  // linkedin: "https://www.linkedin.com/in/1hanzla100/",
+  email: "better.call@realtorbilly.ca",
   // github: "https://github.com/1hanzla100",
-  instagram: "https://www.instagram.com/__hanzla100",
-  wechat:"https://www.xiaohongshu.com/user/profile/653f202600000000300310d6",
-  xiaohongshu:"https://www.xiaohongshu.com/user/profile/653f202600000000300310d6",
-  phone:"https://www.xiaohongshu.com/user/profile/653f202600000000300310d6"
+  // instagram: "https://www.instagram.com/__hanzla100",
+  wechat:"wechatID: Victoriaroot",
+  xiaohongshu:"https://www.xiaohongshu.com/user/profile/5c548220000000001b00c7db",
+  phone:"(778)-251-7935"
   // facebook: 'https://www.facebook.com/1hanzla100',
   // twitter: 'https://twitter.com/1hanzla100',
 };
@@ -199,18 +198,18 @@ export const feedbacks: FeedbackType[] = [
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {
-  title: "Hanzla Tauqeer",
+  title: "Realtor Billy Li",
   description: greetings.description,
-  author: "Hanzla Tauqeer",
-  image: "https://avatars.githubusercontent.com/u/59178380?v=4",
-  url: "https://developer-portfolio-1hanzla100.vercel.app",
+  author: "Billy Li",
+  image: "https://media.licdn.com/dms/image/D4E03AQFiPhhcSm4NXw/profile-displayphoto-shrink_200_200/0/1718212563226?e=1723680000&v=beta&t=ffT0a2zz-5QxGkhuDenWlVMv0CcjnHsK92kFnt9EL7w",
+  url: "https://www.realtorbilly.ca",
   keywords: [
-    "Hanzla",
-    "Hanzla Tauqeer",
-    "@1hanzla100",
-    "1hanzla100",
-    "Portfolio",
-    "Hanzla Portfolio ",
-    "Hanzla Tauqeer Portfolio",
+    "Billy",
+    "Billy Li",
+    "Victoria Realtor",
+    "Buy property",
+    "Realtor",
+    "Billy Portfolio ",
+    "rebate",
   ],
 };

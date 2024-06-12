@@ -8,9 +8,10 @@ const Experience = dynamic(() => import("../containers/Experience"));
 const Projects = dynamic(() => import("../containers/Projects"));
 const Feedbacks = dynamic(() => import("../containers/Feedbacks"));
 const GithubProfileCard = dynamic(() => import("../components/GithubProfileCard"));
+const ComingSoon = dynamic(() => import("../components/ComingSoon"));
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { openSource } from "../portfolio";
+// import { openSource } from "../portfolio";
 import SEO from "../components/SEO";
 import { GithubUserType } from "../types";
 
@@ -20,13 +21,14 @@ export default function Home({ githubProfileData }: { githubProfileData: any }) 
       <SEO />
       <Navigation />
       <Greetings />
-      <Skills />
+      {/* <Skills />
       <Proficiency />
       <Education />
-      <Experience />
-      <Feedbacks />
-      <Projects />
-      <GithubProfileCard {...githubProfileData} />
+      <Experience /> */}
+      {/* <Feedbacks /> */}
+      {/* <Projects /> */}
+      {/* <GithubProfileCard {...githubProfileData} /> */}
+      <ComingSoon/>
     </div>
   );
 }

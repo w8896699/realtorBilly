@@ -8,7 +8,7 @@ type Props = {
 const GreetingLottie = ({ animationPath }: Props) => {
   const defaultOptions = {
     loop: true,
-    autoplay: false,
+    autoplay: true,
     path: animationPath,
   };
 

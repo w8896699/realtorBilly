@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Row, Container } from "reactstrap";
 import { GithubUserType } from "../types";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "./CustomModal";
 
 const GithubProfileCard = ({ avatar_url, bio, location }: GithubUserType) => {
   return (

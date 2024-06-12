@@ -1,54 +1,93 @@
-import React from "react";
-import { Button } from "reactstrap";
+import React, { useState } from "react";
+import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import { socialLinks } from "../portfolio";
+import PhoneModal from "./Modal/PhoneModel";
+import WechatModal from "./Modal/WechatModal";
+import EamilModal from "./Modal/EmailModel";
+// import CustomModal from "./CustomModal";
 
 const SocialLinks = () => {
+  const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+  const [isWechatModalOpen, setIsWechatModalOpen] = useState(false);
+
+  const togglePhoneModal = () => setIsPhoneModalOpen(!isPhoneModalOpen);
+  const toggleWechatModal = () => setIsWechatModalOpen(!isWechatModalOpen);
+  const toggleEmailtModal = () => setIsEmailModalOpen(!isEmailModalOpen);
+
   return (
     <div className="btn-wrapper text-lg">
+      {socialLinks.phone && (
+        <Button
+          className="btn-icon-only rounded-circle ml-1"
+          color="white"
+          onClick={togglePhoneModal}
+          aria-label="phone"
+        >
+          <span className="btn-inner--icon">
+            <i className="fa fa-phone" />
+          </span>
+        </Button>
+      )}
+      {/* <Modal isOpen={phoneModal} toggle={togglePhoneModal}>
+        <ModalHeader toggle={togglePhoneModal}>Contact Phone</ModalHeader>
+        <ModalBody>
+          Please call me at {socialLinks.phone} or leave a message.
+        </ModalBody>
+      </Modal> */}
+     <PhoneModal isOpen={isPhoneModalOpen} toggle={togglePhoneModal} />
+      
       {socialLinks.email && (
         <Button
           className="btn-icon-only rounded-circle ml-1"
           color="white"
           rel="noopener"
           aria-label="URL"
-          href={socialLinks.url}
-          target="_blank"
+          onClick={toggleEmailtModal}
         >
           <span className="btn-inner--icon">
             <i className="fa fa-envelope" />
           </span>
         </Button>
       )}
-{socialLinks.xiaohongshu && (
-  <Button
-    className="btn-icon-only rounded-circle ml-1"
-    // color="instagram"
-    rel="noopener"
-    aria-label="Xiaohongshu"
-    href={socialLinks.xiaohongshu}
-    target="_blank"
-  >
-    {/* <span className="btn-inner--icon"> */}
-      <img className="icon-style btn-icon-only rounded-circle position-relative"  src="/img/icons/SimpleIconsXiaohongshu.png" alt="Xiaohongshu" />
-    {/* </span> */}
-  </Button>
-)}
+      <EamilModal isOpen={isEmailModalOpen} toggle={toggleEmailtModal} />
+
 
       {socialLinks.wechat && (
         <Button
           className="btn-icon-only rounded-circle ml-1"
           color="success"
-          rel="noopener"
+          onClick={toggleWechatModal}
           aria-label="Wechat"
-          href={socialLinks.linkedin}
-          target="_blank"
         >
           <span className="btn-inner--icon">
             <i className="fa fa-weixin" />
           </span>
         </Button>
       )}
+      {/* <Modal isOpen={wechatModal} toggle={toggleWechatModal}>
+        <ModalHeader toggle={toggleWechatModal}>WeChat</ModalHeader>
+        <ModalBody>
+          Please scan the QR code to add me on WeChat.
+          <img className="position-relative img-thumbnail" src="/img/QR-code.jpeg" alt="wechat-QR-code" />
+        </ModalBody>
+      </Modal> */}
 
+      <WechatModal isOpen={isWechatModalOpen} toggle={toggleWechatModal} />
+      {socialLinks.xiaohongshu && (
+        <Button
+          className="btn-icon-only rounded-circle ml-1"
+          // color="instagram"
+          rel="noopener"
+          aria-label="Xiaohongshu"
+          href={socialLinks.xiaohongshu}
+          target="_blank"
+        >
+          {/* <span className="btn-inner--icon"> */}
+            <img className="icon-style btn-icon-only rounded-circle position-relative"  src="/img/icons/SimpleIconsXiaohongshu.png" alt="Xiaohongshu" />
+          {/* </span> */}
+        </Button>
+      )}
       {socialLinks.instagram && (
         <Button
           className="btn-icon-only rounded-circle ml-1"
@@ -63,20 +102,7 @@ const SocialLinks = () => {
           </span>
         </Button>
       )}
-      {socialLinks.phone && (
-        <Button
-          className="btn-icon-only rounded-circle ml-1"
-          color="white"
-          href={socialLinks.phone}
-          target="_blank"
-          rel="noopener"
-          aria-label="phone"
-        >
-          <span className="btn-inner--icon">
-            <i className="fa fa-phone" />
-          </span>
-        </Button>
-      )}
+ 
 
     </div>
   );

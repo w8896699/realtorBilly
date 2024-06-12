@@ -2,10 +2,18 @@ import React, { useState, useEffect } from "react";
 import { greetings, socialLinks } from "../portfolio";
 import Headroom from "headroom.js";
 import { UncontrolledCollapse, NavbarBrand, Navbar, NavItem, NavLink, Nav, Container, Row, Col } from "reactstrap";
+import WechatModal from "./Modal/WechatModal";
+import EmailModel from "./Modal/EmailModel"
 
 const Navigation = () => {
   const [collapseClasses, setCollapseClasses] = useState("");
   const onExiting = () => setCollapseClasses("collapsing-out");
+
+    const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+  const [isWechatModalOpen, setIsWechatModalOpen] = useState(false);
+
+  const toggleEmailModal = () => setIsEmailModalOpen(!isEmailModalOpen);
+  const toggleWechatModal = () => setIsWechatModalOpen(!isWechatModalOpen);
 
   const onExited = () => setCollapseClasses("");
 
@@ -13,13 +21,14 @@ const Navigation = () => {
     let headroom = new Headroom(document.getElementById("navbar-main")!);
     // initialise
     headroom.init();
+    // headroom.freeze();
   });
 
   return (
     <>
       <header className="header-global">
         <Navbar className="navbar-main navbar-transparent navbar-light headroom" expand="lg" id="navbar-main">
-          <Container>
+          <Container className="mw-100">
             <NavbarBrand href="/" className="mr-lg-5 d-flex flex-row ">
               <h2 className="text-white mr-4" id="nav-logo">REALTOR
               <span className="position-relative top-0 start-0 ">®</span>
@@ -57,17 +66,17 @@ const Navigation = () => {
                 {socialLinks.email && (
                   <NavItem>
                     <NavLink
-                      rel="noopener"
-                      aria-label="Facebook"
                       className="nav-link-icon"
-                      href={socialLinks.facebook}
-                      target="_blank"
+                      onClick={toggleEmailModal}  // Change from href to onClick
+                      style={{ cursor: 'pointer' }}
                     >
                       <i className="fa fa-envelope" />
                       <span className="nav-link-inner--text d-lg-none ml-2">E-mail</span>
                     </NavLink>
                   </NavItem>
                 )}
+              <EmailModel isOpen={isEmailModalOpen} toggle={toggleEmailModal}/>
+
                 {socialLinks.instagram && (
                   <NavItem>
                     <NavLink
@@ -82,49 +91,50 @@ const Navigation = () => {
                     </NavLink>
                   </NavItem>
                 )}
-                {socialLinks.wechat && (
+              {socialLinks.wechat && (
+                <NavItem>
+                  <NavLink
+                    className="nav-link-icon"
+                    onClick={toggleWechatModal}  // Change from href to onClick
+                    style={{ cursor: 'pointer' }}  // Ensures the link looks clickable
+                  >
+                    <i className="fa fa-weixin" />
+                    <span className="nav-link-inner--text d-lg-none ml-2">Wechat</span>
+                  </NavLink>
+                </NavItem>
+              )}
+              <WechatModal isOpen={isWechatModalOpen} toggle={toggleWechatModal} />
+
+
+              {socialLinks.xiaohongshu && (
                   <NavItem>
                     <NavLink
                       rel="noopener"
-                      aria-label="Github"
+                      aria-label="Xiaohongshu"
                       className="nav-link-icon"
-                      href={socialLinks.wechat}
+                      href={socialLinks.xiaohongshu}
                       target="_blank"
-                    >
-                      <i className="fa fa-weixin" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">weixin</span>
-                    </NavLink>
-                  </NavItem>
-                )}
-                {socialLinks.phone && (
-                  <NavItem>
-                    <NavLink
-                      rel="noopener"
-                      aria-label="Twitter"
-                      className="nav-link-icon"
-                      href={socialLinks.twitter}
-                      target="_blank"
-                    >
-                      <i className="fa fa-phone-square" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">Twitter</span>
-                    </NavLink>
-                  </NavItem>
-                )}
-                {socialLinks.xiaohongshu && (
-                  <NavItem>
-                    <NavLink
-                      rel="noopener"
-                      aria-label="Linkedin"
-                      className="nav-link-icon"
-                      href={socialLinks.linkedin}
-                      target="_blank"
-                    >
+                      >
                       <img className="btn-icon-only rounded-circle" src="/img/icons/SimpleIconsXiaohongshu.png" alt="Xiaohongshu" />
                       <span className="nav-link-inner--text d-lg-none ml-2">xiaohongshu</span>
+                      {/* {socialLinks.phone && (
+                        <NavItem>
+                          <NavLink
+                            rel="noopener"
+                            aria-label="Twitter"
+                            className="nav-link-icon"
+                            href={socialLinks.twitter}
+                            target="_blank"
+                          >
+                            <i className="fa fa-phone-square" />
+                            <span className="nav-link-inner--text d-lg-none ml-2">Twitter</span>
+                          </NavLink>
+                        </NavItem>
+                      )} */}
                     </NavLink>
                   </NavItem>
                 )}
-  
+                  <h4 className="text-red mr-4"> | <i className="fa fa-phone-square" /> (778)-251-7935</h4>
               </Nav>
             </UncontrolledCollapse>
           </Container>
