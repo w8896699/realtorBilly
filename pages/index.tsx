@@ -37,12 +37,12 @@ export default function Home({ githubProfileData }: { githubProfileData: any }) 
 //   githubProfileData: PropTypes.object.isRequired,
 // };
 
-export async function getStaticProps() {
-  const githubProfileData: GithubUserType = await fetch(
-    `https://api.github.com/users/${openSource.githubUserName}`
-  ).then(res => res.json());
+// export async function getStaticProps() {
+//   const githubProfileData: GithubUserType = await fetch(
+//     `https://api.github.com/users/${openSource.githubUserName}`
+//   ).then(res => res.json());
 
-  return {
-    props: { githubProfileData },
-  };
-}
+//   return {
+//     props: { githubProfileData },
+//   };
+// }

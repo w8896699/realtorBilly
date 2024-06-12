@@ -22734,4 +22734,8 @@ td.rdtYear:hover {
 	max-width: 80%;
 	max-height: 80%;
 }
+
+.fr_icon{
+	max-height: 5vh;
+}
 /*# sourceMappingURL=argon-design-system-react.css.map */
