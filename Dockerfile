@@ -1,16 +1,16 @@
 # Base layer
-FROM node:18.18.0 AS dependencies
+FROM node:18-alpine AS dependencies
 
 RUN apk add --no-cache libc6-compat
 WORKDIR /home/app
 COPY package.json ./
-COPY package-lock.json ./
+# COPY package-lock.json ./
 
 RUN npm i -g yarn --force
 RUN yarn
 
 # Builder layer
-FROM node:16-alpine AS builder
+FROM node:18-alpine AS builder
 
 WORKDIR /home/app
 COPY --from=dependencies /home/app/node_modules ./node_modules
@@ -19,7 +19,7 @@ COPY . .
 RUN yarn build
 
 # Runner layer
-FROM node:18.18.0 AS runner
+FROM node:18-alpine AS runner
 WORKDIR /home/app
 ENV NEXT_TELEMETRY_DISABLED 1
 

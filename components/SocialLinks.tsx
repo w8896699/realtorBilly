@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { Button } from "reactstrap";
 import { socialLinks } from "../portfolio";
 import PhoneModal from "./Modal/PhoneModel";
 import WechatModal from "./Modal/WechatModal";
 import EamilModal from "./Modal/EmailModel";
-// import CustomModal from "./CustomModal";
 
-const SocialLinks = () => {
+const  SocialLinks: React.FC = () => {
   const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   const [isWechatModalOpen, setIsWechatModalOpen] = useState(false);

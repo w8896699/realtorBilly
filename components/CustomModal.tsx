@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 
-interface CustomModalProps {
+export interface CustomModalProps {
   isOpen: boolean;
   toggle: () => void;
   title: string;
