@@ -27,17 +27,12 @@ const Navigation = () => {
   return (
     <>
       <header className="header-global">
-        <Navbar className="navbar-main navbar-transparent navbar-light headroom" expand="lg" id="navbar-main">
-          <Container className="mw-100">
-             <img className="img-fluid fr_icon " src="/img/icons/FR_logo.png" alt="" />
-            <NavbarBrand href="/" className="mr-lg-5 d-flex flex-row ">
-      
-              <h2 className="text-white mr-4" id="nav-logo">REALTOR
-              <span className="position-relative top-0 start-0 ">®</span>
-              </h2>
-              <h2 className="text-white" id="nav-title">
-                {greetings.name}
-              </h2>
+        <Navbar className="navbar-main navbar-transparent navbar-light headroom nav-header" expand="lg" id="navbar-main">
+          <Container className="mw-100 nav-container">
+            <img className="img-fluid fr_icon nav_image" src="/img/icons/FR_logo.png" alt="" />
+            <NavbarBrand href="/" className="mr-lg-5 d-flex flex-row">
+              <h2 className="text-white mr-4" id="nav-logo">REALTOR<span className="position-relative top-0 start-0 ">®</span></h2>
+              <h2 className="text-white" id="nav-title">{greetings.name}</h2>
             </NavbarBrand>
             <button className="navbar-toggler" aria-label="navbar_toggle" id="navbar_global">
               <span className="navbar-toggler-icon" />

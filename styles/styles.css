@@ -1,3 +1,55 @@
 body > div:first-child {
   overflow-x: hidden;
 }
+
+
+/* Base styles - these apply to all screen sizes unless overridden */
+.img-profile {
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 10%;
+  margin-left: 7vw;
+}
+
+.nav_image{
+  max-width: 100px;
+}
+
+.container-greeting{
+  padding-top: 10vh;
+}
+
+.nav-container{
+  padding-left: 3vw;
+}
+
+#nav-logo,#nav-title {
+  font-size: 2rem;
+  /* Default size */
+}
+  
+    /* Media query for small devices like iPhone 13 */
+@media only screen and (max-width: 375px) {
+  .container-greeting {
+      padding-top: 10vh;
+    }
+  /* This range covers iPhone 13 and similar devices */
+  .img-profile {
+    max-width: 250px;
+    border-radius: 80%;
+    /* Slightly smaller for narrow screens */
+  }
+
+  .nav_image {
+    max-width: 60px;
+  }
+
+  .nav-container {
+    padding-left: 0vw;
+  }
+
+  #nav-logo,#nav-title {
+    font-size: 0.85rem;
+    /* Smaller font size for small screens */
+  }
+}

@@ -10,7 +10,7 @@ const Greetings = () => {
       // Update background image
       setBackgroundImage(images[imageIndex]);
       imageIndex = (imageIndex + 1) % images.length; // Cycle through images
-    }, 7000); // Change image every 3000 milliseconds (3 seconds)
+    }, 7000); // Change image every 7000 milliseconds (7 seconds)
 
     return () => clearInterval(intervalId); // Clean up the interval on component unmount
   }, []);
@@ -28,11 +28,10 @@ const Greetings = () => {
     <main>
       <div className="position-relative">
         <section className="section section-lg section-shaped pb-250" style={{ backgroundImage: `url(${backgroundImage})` }}>
-        {/* <section className="section section-lg section-shaped pb-250" style={{ backgroundImage: `url(/img/homepage6.png)` }}> */}
-          <Container className=" d-flex">
+          <Container className="d-flex container-greeting">
             <div className="col px-0">
-              <Row className=" mx-7 d-flex ">
-                <Col lg="6" className="pr-2">
+              <Row className="align-items-center">
+                <Col lg="6" md="8" className="pr-2">
                   <h1 className="display-3 text-white">{greetings.title + " "}</h1>
                   <p className="lead text-white">{greetings.description}</p>
                   <SocialLinks />
@@ -51,8 +50,8 @@ const Greetings = () => {
                     </div>
                   )} */}
                 </Col>
-                <Col lg="6" className="p-5">
-                   <img src="/img/realtorBilly.jpeg" alt="Descriptive Alt Text" className="vh-45" />
+                <Col lg="6" md="4" className="align-items-center justify-content-center d-flex">
+                  <img src="/img/realtorBilly.jpeg" alt="Descriptive Alt Text" className="img-fluid img-profile" />
                   {/* <GreetingLottie animationPath="/lottie/coding.json" /> */}
                 </Col>
               </Row>
