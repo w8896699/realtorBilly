@@ -1,33 +1,35 @@
 import dynamic from "next/dynamic";
 const Navigation = dynamic(() => import("../components/Navigation"));
 const Greetings = dynamic(() => import("../containers/Greetings"));
+const Contact = dynamic(() => import("../containers/ContactBox"));
 // const Skills = dynamic(() => import("../containers/Skills"));
 // const Proficiency = dynamic(() => import("../containers/Proficiency"));
 // const Education = dynamic(() => import("../containers/Education"));
 // const Experience = dynamic(() => import("../containers/Experience"));
-// const Projects = dynamic(() => import("../containers/Projects"));
-// const Feedbacks = dynamic(() => import("../containers/Feedbacks"));
+const Projects = dynamic(() => import("../containers/Projects"));
+const Feedbacks = dynamic(() => import("../containers/Feedbacks"));
 // const GithubProfileCard = dynamic(() => import("../components/GithubProfileCard"));
 const ComingSoon = dynamic(() => import("../components/ComingSoon"));
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
-// import { openSource } from "../portfolio";
+import { review } from "../portfolio";
 import SEO from "../components/SEO";
-// import { GithubUserType } from "../types";
+import { GithubUserType } from "../types";
 
-export default function Home({}: {}) {
+export default function Home({githubProfileData}: {githubProfileData:any}) {
   return (
     <div>
       <SEO />
       <Navigation />
       <Greetings />
+      <Contact />
       {/* <Skills />
       <Proficiency />
       <Education />
       <Experience /> */}
-      {/* <Feedbacks /> */}
-      {/* <Projects /> */}
-      {/* <GithubProfileCard {...githubProfileData} /> */}
+      <Feedbacks  {...githubProfileData} />
+      <Projects />
+    {/* <GithubProfileCard {...githubProfileData} /> */}
       <ComingSoon/>
     </div>
   );
@@ -37,12 +39,21 @@ export default function Home({}: {}) {
 //   githubProfileData: PropTypes.object.isRequired,
 // };
 
-// export async function getStaticProps() {
-//   const githubProfileData: GithubUserType = await fetch(
-//     `https://api.github.com/users/${openSource.githubUserName}`
-//   ).then(res => res.json());
+// export const review = ["1hanzla100", "w8896699", "ShellyHanxue"];
 
-//   return {
-//     props: { githubProfileData },
-//   };
-// }
+export const getStaticProps = async () => {
+  const fetchPromises = review.map(reviewer => {
+    return fetch(`https://api.github.com/users/${reviewer}`)
+      .then(res => res.json())
+      .then(data => {
+        return data;
+      });
+    });
+    
+    const githubProfileData = await Promise.all(fetchPromises);
+  return {
+    props: {
+      githubProfileData
+    }
+  };
+};

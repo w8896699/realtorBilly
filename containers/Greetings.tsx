@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { greetings } from "../portfolio";
-import { Button, Container, Row, Col } from "reactstrap";
-import GreetingLottie from "../components/DisplayLottie";
+import {  Container, Row, Col } from "reactstrap";
+// import GreetingLottie from "../components/DisplayLottie";
 import SocialLinks from "../components/SocialLinks";
 
 const Greetings = () => {
@@ -51,7 +51,9 @@ const Greetings = () => {
                   )} */}
                 </Col>
                 <Col lg="6" md="4" className="align-items-center justify-content-center d-flex">
-                  <img src="/img/realtorBilly.jpeg" alt="Descriptive Alt Text" className="img-fluid img-profile" />
+                  <div className="img-container">
+                    <img src="/img/realtorBilly.jpeg" alt="Descriptive Alt Text" className="img-fluid img-profile" />
+                  </div>
                   {/* <GreetingLottie animationPath="/lottie/coding.json" /> */}
                 </Col>
               </Row>
