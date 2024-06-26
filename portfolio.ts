@@ -178,37 +178,61 @@ export const projects: ProjectType[] = [
 ];
 
 export const feedbacks: any[] = [
+  // {
+  //   feedback: "Billy’s commitment to excellent service transformed our house hunt into a pleasant experience. He provided insightful guidance and was incredibly patient with our myriad questions. Highly recommend him for anyone looking for an informed buying experience."
+  // },
   {
-    feedback:
-      "You were a wonderful addition to our team, alhumdulillah. I'm quite impressed with your abilities and professional practices. You approach problems from a unique perspective and always ask the right question. Finding a good teammate like Hanzla is extremely difficult.",
+    feedback: "What stood out most during our interaction with Billy was his meticulous attention to detail. He was always prepared with all the right information, which made the entire selling process a breeze for us."
   },
   {
-    feedback:
-      "Hanzla has a deep understanding of web development technologies and is adept at using them to build scalable, robust, and secure web applications. He has worked on various projects, ranging from small-scale to large-scale, and has shown his ability to work collaboratively.",
+    feedback: "Billy’s unique rebate offer was a huge relief during the buying process. It showed his commitment to not just service, but also to making real estate more accessible and affordable."
+  },
+  {
+    feedback: "With Billy, we felt secure knowing we were getting more than just a realtor; we were getting a financial advocate who offered rebates that truly benefited us during our purchase."
+  },
+  {
+    feedback: "I found Billy to be not only extremely knowledgeable but also very warm and easy to talk to. He walked us through each step of the buying process with such ease that it removed all our anxieties."
   },
   // {
-  //   feedback:
-  //     "Hanzla has a deep understanding of web development technologies and is adept at using them to build scalable, robust, and secure web applications. He has worked on various projects, ranging from small-scale to large-scale, and has shown his ability to work collaboratively.",
+  //   feedback: "Billy was a fantastic advocate for us during negotiations. His strategic approach ensured we got the best deal possible. His professionalism and integrity were evident throughout our interactions."
   // },
   // {
-  //   feedback:
-  //     "Hanzla has a deep understanding of web development technologies and is adept at using them to build scalable, robust, and secure web applications. He has worked on various projects, ranging from small-scale to large-scale, and has shown his ability to work collaboratively.",
+  //   feedback: "Engaging Billy as our realtor was one of our wisest choices. His thorough market analysis helped us understand the landscape, making it easy to make the right decisions quickly."
   // },
   // {
-  //   feedback:
-  //     "Hanzla has a deep understanding of web development technologies and is adept at using them to build scalable, robust, and secure web applications. He has worked on various projects, ranging from small-scale to large-scale, and has shown his ability to work collaboratively.",
-  // },
-  // {
-  //   feedback:
-  //     "Very skilled at what he does and has an in depth knowledge of Django and he's always ready to handle any challenges thrown at him. He's been a valuable member of my team and i look forward to working with him in the years to come",
+  //   feedback: "Billy impressed us with his proactive updates and his ability to handle every aspect of the sale with professionalism. His understanding of the market dynamics is commendable."
   // },
   //   {
-  //   feedback:
-  //     "Very skilled at what he does and has an in depth knowledge of Django and he's always ready to handle any challenges thrown at him. He's been a valuable member of my team and i look forward to working with him in the years to come",
+  //   feedback: "Billy not only helped us navigate the complexities of real estate, but he also offered a rebate that significantly eased our financial load. It’s clear he prioritizes his clients’ financial well-being."
+  // },
+  // {
+  //   feedback: "We really appreciated how Billy handled our transaction from start to finish with such dedication. He was always available and ready to go the extra mile to meet our needs."
+  // },
+  // {
+  //   feedback: "Billy's straightforward and honest communication was refreshing. He always had our best interests at heart and guided us through the selling process with great care and expertise."
   // }
+  // {
+  //   feedback: "We felt very supported by Billy throughout our home buying journey. He was not only knowledgeable but also very empathetic towards our needs as first-time buyers."
+  // },
+  // {
+  //   feedback: "Billy’s adeptness at navigating the real estate market made him an invaluable asset to us during our home search. He made complex processes seem simple, which was a huge relief."
+  // },
+  // {
+  //   feedback: "Billy's approach to real estate is incredibly thorough and client-focused. He was instrumental in helping us find a home that met all our criteria."
+  // },
+  // {
+  //   feedback: "The level of detail and care Billy put into our property sale was impressive. He was always strategic in his planning and it paid off in the end."
+  // },
+  // {
+  //   feedback: "Working with Billy was a pleasure. He provided a seamless and efficient home buying experience and always made sure to address all our concerns with patience and thoroughness."
+  // },
+  // {
+  //   feedback: "Billy was consistently reliable, providing expert advice at every turn. His ability to anticipate our needs and his quick response time made the entire process smoother."
+  // },
 ];
 
-export const review = ["1hanzla100", "w8896699", "shellyxuehan", "chloeiii", "w8896699", "w8896699", "w8896699"];
+export const review = ["Urehelonn", "chloeiii", "shellyxuehan", "deathping1994"];
+
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {

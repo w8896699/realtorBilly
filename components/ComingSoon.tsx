@@ -18,7 +18,7 @@ const ComingSoon = () => {
                 </p>
                 <p className="text-center description">Reach Out to me!</p>
                 <p className="text-center description">LOOKING FOR BUDGET-FRIENDLY REALTOR SERVICES? MY INBOX IS OPEN FOR ALL!</p>
-                <p className="text-center description">Shot me a email or add me on Above social media</p>
+                <p className="text-center description">Shoot me a email or add me on social medias, Lets connect! </p>
 
               </CardBody>
             </Card>

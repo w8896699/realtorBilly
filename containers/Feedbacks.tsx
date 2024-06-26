@@ -13,52 +13,52 @@ type FeedbackType = {
   comment: string;
 };
 
-const scrollAnimation = keyframes`
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-35vw * 7)); // Adjust based on your actual item width and number
-  }
-`;
-
 // const scrollAnimation = keyframes`
 //   0% {
 //     transform: translateX(0);
 //   }
 //   100% {
-//     transform: translateX(-100%); // Assuming the duplicated content is exactly 200% of the container width
+//     transform: translateX(-100%); // Loop back to start for infinite scroll
 //   }
 // `;
 
+const scrollAnimation = keyframes
+  `from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-35vw * 10)); // Adjust based on your actual item width and number
+  }
+;`
+
 const FeedbackContainer = styled.div`
-  width: 100vw;
+  width: 100%;
+  overflow: hidden; // Ensure nothing extends beyond the viewport
+  // display: flex;
   justify-content: center;
 `;
 
 const Wrap = styled.div`
-overflow: hidden;
+  // overflow: hidden;
   position: relative;
-
-  // width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   padding: 0 20px;
+  width: 100%; // Ensure this fills the container width
   &:after, &:before {
+    content: "";
     position: absolute;
     height: 130px;
+    width: 100px; // Adjust based on your design needs
     z-index: 2;
   }
-  &:after{
+  &:after {
     right: 0;
     top: 0;
-    transform: rotateZ(180deg);
   }
   & > div {
     display: flex;
-    width: calc(350px * 10); // Assuming you have enough cards to fill double the container width
-    // animation: ${scrollAnimation} 15s linear infinite;
+    // animation: ${scrollAnimation} 60s linear infinite; // Smooth continuous scroll
   }
 `;
 
@@ -81,7 +81,7 @@ const Feedbacks = (githubProfileData: GithubUserType[]) => {
   }, []);
   const mergedFeedbacks: FeedbackType[] = feedbacks.map((feedback:any, index) => {
   const reviewer = githubProfileData[index]; // Get the corresponding feedback based on index
-  // console.log('what is current reviewer')
+  // console.log('what is current reviewer',reviewer)
   return {
     username: reviewer.name,
     avatarUrl: reviewer.avatar_url,
@@ -100,15 +100,15 @@ const Feedbacks = (githubProfileData: GithubUserType[]) => {
               </div>
             </div>
             <div className="pl-4">
-              <h4 className="display-3 text-info">Our Clients Feedback</h4>
+              <h4 className="display-3 text-info">My Clients Feedback</h4>
             </div>
           </div>
           <Wrap className={startAnimation ? 'start-animation' : ''}>
   
               {mergedFeedbacks.map((data, i) => (
-                <Col key={i} lg="3" md="4" sm="6" xs="12"> 
+                // <Col key={i} lg="3" md="4" sm="6" xs="12"> 
                   <TestimonialCard {...data} />
-                </Col>
+                // </Col>
               ))}
 
           </Wrap>

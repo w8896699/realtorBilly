@@ -9,18 +9,32 @@ interface TestimonialCardProps {
 
 const Card = styled.div`
   background: white;
+  flex-direction: column;
   border-radius: 8px;
-  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 35vw;  // Limit width to 35vw on larger screens
-  height: 30vh;
-  margin: 20px auto;  // Center the card
 
-  @media (max-width: 768px) {  // Adjust for smaller screens
+  @media (max-width: 480px) {  // Adjust for smaller screens
+    min-width: 70%;
     padding: 15px;
-    margin: 10px;
-    width: 30%; // Use 100% width for mobile view
-    height: 60%; // Use 100% width for mobile view
+    height: 60%;
+    margin: 10px 7%;
+  }
+
+  @media (min-width: 480px) {  // Adjust for bigger screens
+    min-width: 30%;
+    padding: 8px;
+    height: 60%;
+    margin: 10px 50px;
+  }
+
+    @media (min-width: 1200px) { 
+      width: 28vw;
+      min-width: 20%;
+      padding: 20px;
+      max-height: 45vh;
+      height: 40%
+      min-height: 30vh;
+      margin: 20px 10px 10px 100px;
   }
 `;
 
@@ -60,16 +74,27 @@ const Username = styled.h5`
   }
 `;
 
+const StyledDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+const StyledIcon = styled.img`
+  // width: 50px;
+  height: 40px;
+`
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ comment, username, avatarUrl }) => {
   return (
     <Card>
       <Comment>"{comment}"</Comment>
-      <UserInfo>
-        <Avatar src={avatarUrl} alt={username} />
-        <div>
-          <Username>{username}</Username>
-        </div>
-      </UserInfo>
+      <StyledDiv>
+        <UserInfo>
+          <Avatar src={avatarUrl} alt={username} />
+          <div>
+            <Username>{username}</Username>
+          </div>
+        </UserInfo>
+        <StyledIcon src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" />
+      </StyledDiv>
     </Card>
   );
 };
