@@ -32,7 +32,7 @@ export const socialLinks: SocialLinksType = {
   // github: "https://github.com/1hanzla100",
   // instagram: "https://www.instagram.com/__hanzla100",
   wechat:"wechatID: Victoriaroot",
-  xiaohongshu:"https://www.xiaohongshu.com/user/profile/5c548220000000001b00c7db",
+  xiaohongshu:"https://www.xiaohongshu.com/user/profile/63c5fad500000000260125f3",
   phone:"(778)-251-7935"
   // facebook: 'https://www.facebook.com/1hanzla100',
   // twitter: 'https://twitter.com/1hanzla100',
@@ -193,9 +193,9 @@ export const feedbacks: any[] = [
   {
     feedback: "I found Billy to be not only extremely knowledgeable but also very warm and easy to talk to. He walked us through each step of the buying process with such ease that it removed all our anxieties."
   },
-  // {
-  //   feedback: "Billy was a fantastic advocate for us during negotiations. His strategic approach ensured we got the best deal possible. His professionalism and integrity were evident throughout our interactions."
-  // },
+  {
+    feedback: "Billy was a fantastic advocate for us during negotiations. His strategic approach ensured we got the best deal possible. His professionalism and integrity were evident throughout our interactions."
+  },
   // {
   //   feedback: "Engaging Billy as our realtor was one of our wisest choices. His thorough market analysis helped us understand the landscape, making it easy to make the right decisions quickly."
   // },
@@ -231,12 +231,14 @@ export const feedbacks: any[] = [
   // },
 ];
 
-export const review = ["Urehelonn", "chloeiii", "shellyxuehan", "deathping1994"];
+export const review = ["Urehelonn",  "shellyxuehan", "chloeiii", "deathping1994", "ruomin"];
+
+// Backup: YuriRicardo
 
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {
-  title: "Realtor Billy Li",
+  title: "维多利亚地产范闲",
   description: greetings.description,
   author: "Billy Li",
   image: "https://media.licdn.com/dms/image/D4E03AQFiPhhcSm4NXw/profile-displayphoto-shrink_200_200/0/1718212563226?e=1723680000&v=beta&t=ffT0a2zz-5QxGkhuDenWlVMv0CcjnHsK92kFnt9EL7w",
@@ -249,5 +251,10 @@ export const seoData: SEODataType = {
     "Realtor",
     "Billy Portfolio ",
     "rebate",
+    "维多利亚地产范闲",
+    "维多利亚房产",
+    "维多利亚买房",
+    "维多利亚买房rebate",
+    "地产范闲",
   ],
 };

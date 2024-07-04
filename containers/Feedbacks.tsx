@@ -27,7 +27,7 @@ const scrollAnimation = keyframes
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-35vw * 10)); // Adjust based on your actual item width and number
+    transform: translateX(calc(-25vw * 5)); // Adjust based on your actual item width and number
   }
 ;`
 
@@ -58,7 +58,7 @@ const Wrap = styled.div`
   }
   & > div {
     display: flex;
-    // animation: ${scrollAnimation} 60s linear infinite; // Smooth continuous scroll
+    animation: ${scrollAnimation} 30s linear infinite; // Smooth continuous scroll
   }
 `;
 

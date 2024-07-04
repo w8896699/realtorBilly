@@ -85,7 +85,7 @@ const StyledIcon = styled.img`
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ comment, username, avatarUrl }) => {
   return (
     <Card>
-      <Comment>"{comment}"</Comment>
+      <Comment>&quot;{comment}&quot;</Comment>
       <StyledDiv>
         <UserInfo>
           <Avatar src={avatarUrl} alt={username} />
