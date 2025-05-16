@@ -238,7 +238,7 @@ export const review = ["Urehelonn",  "shellyxuehan", "chloeiii", "deathping1994"
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {
-  title: "维多利亚地产范闲",
+  title: "范闲维多利亚地产",
   description: greetings.description,
   author: "Billy Li",
   image: "https://media.licdn.com/dms/image/D4E03AQFiPhhcSm4NXw/profile-displayphoto-shrink_200_200/0/1718212563226?e=1723680000&v=beta&t=ffT0a2zz-5QxGkhuDenWlVMv0CcjnHsK92kFnt9EL7w",
@@ -251,10 +251,11 @@ export const seoData: SEODataType = {
     "Realtor",
     "Billy Portfolio ",
     "rebate",
+    "范闲维多利亚地产",
     "维多利亚地产范闲",
     "维多利亚房产",
     "维多利亚买房",
     "维多利亚买房rebate",
-    "地产范闲",
+    "BC地产范闲",
   ],
 };
